@@ -11,7 +11,10 @@
             <th>STOK</th>
             <th colspan="3">AKSI</th>
         </tr>
-        <?php foreach($barang as $brg):?>
+
+        <?php 
+       
+        foreach($barang as $brg):?>
 
 <tr>
     <td><?php echo $brg->id_brg ?></td>
@@ -21,8 +24,8 @@
     <td><?php echo $brg->harga ?></td>
     <td><?php echo $brg->stok ?></td>
     <td><div class="btn btn-success btn-sm"><i class="fas fa-search-plus" ></i></div></td>
-    <td><div class="btn btn-success btn-sm"><i class="fas fa-edit" ></i></div></td>
-    <td><div class="btn btn-danger btn-sm"><i class="fas fa-trash" ></i></div></td>
+    <td><?php echo anchor('/admin/data_barang/edit/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fas fa-edit" ></i></div>')?></td>
+    <td><?php echo anchor('/admin/data_barang/hapus/'.$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash" ></i></div>')?></td>
 </tr>
 
             <?php endforeach;?>
@@ -40,7 +43,11 @@
         </button>
       </div>
       <div class="modal-body">
-    <form action="<?php echo base_url().'admin/data_barang/tambah_aksi'?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo base_url().'index.php/admin/data_barang/tambah_aksi'?>" method="post" enctype="multipart/form-data">
+           <div class="form-grup">
+                <label>ID barang</label>
+                <input type="text" name="id_brg" class="form-control">
+            </div>
             <div class="form-grup">
                 <label>Nama Barang</label>
                 <input type="text" name="nama_brg" class="form-control">
