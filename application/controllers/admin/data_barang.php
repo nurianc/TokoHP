@@ -10,7 +10,6 @@ class Data_barang extends CI_Controller{
     }
     public function tambah_aksi()
     {
-        $id_brg         =$this->input->post('id_brg');
         $nama_brg       =$this->input->post('nama_brg');
         $keterangan     =$this->input->post('keterangan');
         $kategori       =$this->input->post('kategori');
@@ -29,7 +28,7 @@ class Data_barang extends CI_Controller{
             }
         }
         $data = array(
-            'id_brg'        =>$id_brg,
+            
             'nama_brg'      => $nama_brg,
             'keterangan'    => $keterangan,
             'kategori'      => $kategori,

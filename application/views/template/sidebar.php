@@ -20,7 +20,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('dashboard')?>">
+                <a class="nav-link" href="<?php echo base_url('/index.php/dashboard')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -112,13 +112,25 @@
                             </div>
                         </li>
                 
+<div class="navbar">
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <?php
+            $keranjang= 'keranjang Belanja:'.$this->cart->total_items().'items'
+            ?>
+            <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>
+        </li>
+    </ul>
+</div>
+
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="<?php echo base_url('assets/img/undraw_profile.svg')?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

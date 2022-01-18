@@ -3,7 +3,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>ID Barang</th>
+            <th>No</th>
             <th>Nama Barang</th>
             <th>Keterangan</th>
             <th>Kategori</th>
@@ -13,11 +13,11 @@
         </tr>
 
         <?php 
-       
+       $no=1;
         foreach($barang as $brg):?>
 
 <tr>
-    <td><?php echo $brg->id_brg ?></td>
+    <td><?php echo $no++ ?></td>
     <td><?php echo $brg->nama_brg ?></td>
     <td><?php echo $brg->keterangan ?></td>
     <td><?php echo $brg->kategori ?></td>
@@ -44,10 +44,7 @@
       </div>
       <div class="modal-body">
     <form action="<?php echo base_url().'index.php/admin/data_barang/tambah_aksi'?>" method="post" enctype="multipart/form-data">
-           <div class="form-grup">
-                <label>ID barang</label>
-                <input type="text" name="id_brg" class="form-control">
-            </div>
+          
             <div class="form-grup">
                 <label>Nama Barang</label>
                 <input type="text" name="nama_brg" class="form-control">
