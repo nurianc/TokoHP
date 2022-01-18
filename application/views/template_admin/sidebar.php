@@ -12,7 +12,7 @@
                 <i class="fas fa-store-alt"></i>
 
                 </div>
-                <div class="sidebar-brand-text mx-3">TOKO HP </div>
+                <div class="sidebar-brand-text mx-3">ADMIN</div>
             </a>
 
             <!-- Divider -->
@@ -20,30 +20,21 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('dashboard')?>">
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/dashboard_admin')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Kategori
-            </div>
-
-
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="handphone.html">
-                    <i class="fas fa-fw fa-laptop"></i>
-                    <span>HandPhone</span></a>
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/data_barang')?>">
+                    <i class="fas fa-fw fa-database"></i>
+                    <span>Data Barang</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aksesoris.html">
-                <i class="fas fa-headphones"></i>
-                    <span>Aksesoris HandPhone</span></a>
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/invoices')?>">
+                <i class="fas fa-file-invoice"></i>
+                    <span>Invoices</span></a>
             </li>
             
 
