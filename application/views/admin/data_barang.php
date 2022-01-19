@@ -23,7 +23,6 @@
     <td><?php echo $brg->kategori ?></td>
     <td><?php echo $brg->harga ?></td>
     <td><?php echo $brg->stok ?></td>
-    <td><div class="btn btn-success btn-sm"><i class="fas fa-search-plus" ></i></div></td>
     <td><?php echo anchor('/admin/data_barang/edit/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fas fa-edit" ></i></div>')?></td>
     <td><?php echo anchor('/admin/data_barang/hapus/'.$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash" ></i></div>')?></td>
 </tr>
@@ -55,7 +54,10 @@
             </div>
             <div class="form-grup">
                 <label>Kategori</label>
-                <input type="text" name="kategori" class="form-control">
+                <select class="form-control" name="kategori">
+                  <option>HandPhone</option>
+                  <option>aksesoris</option>
+                </select>
             </div>
             <div class="form-grup">
                 <label>harga</label>
