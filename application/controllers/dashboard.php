@@ -29,4 +29,29 @@ class Dashboard extends CI_Controller{
         $this->load->view('keranjang');
         $this->load->view('template/footer');
     }
+    public function hapus_keranjang()
+    {
+        $this->cart->destroy();
+        redirect('dashboard/index');
+    }
+    public function pembayaran()
+    {
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('pembayaran');
+        $this->load->view('template/footer');
+    }
+    public function proses_pesanan()
+    {
+        $is_processed = $this->model_invoice->index();
+        if($is_processed){
+        $this->cart->destroy();
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('proses_pesanan');
+        $this->load->view('template/footer');
+        }else{
+            echo"maaf Pesanan Anda Gagal Diproses!";
+        }
+    }
 }

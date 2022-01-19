@@ -32,7 +32,7 @@
                     <span>Data Barang</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('index.php/admin/invoices')?>">
+                <a class="nav-link" href="<?php echo base_url('index.php/admin/invoice')?>">
                 <i class="fas fa-file-invoice"></i>
                     <span>Invoices</span></a>
             </li>
