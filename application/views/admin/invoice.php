@@ -1,7 +1,7 @@
 <div class="container-fliud">
     <h4>Invoice Pesanan Produk</h4>
-    <table class="table-bordered table-hover table-striped">
-        <tr>
+    <table class="table-bordered table-hover table-striped ">
+        <tr >
             <th>ID Invoice</th>
             <th>Nama Pemesan</th>
             <th>Alamat Pemesanan</th>
@@ -14,7 +14,7 @@
             <td><?php echo $inv->id ?></td>
             <td><?php echo $inv->nama ?></td>
             <td><?php echo $inv->alamat ?></td>
-            <td><?php echo $inv->tgl_bayar ?></td>
+            <td><?php echo $inv->tgl_pesan ?></td>
             <td><?php echo $inv->batas_bayar ?></td>
             <td><div class="btn btn-sm btn-primary">Detail</div></td>
         </tr>
