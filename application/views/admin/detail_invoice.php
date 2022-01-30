@@ -29,4 +29,5 @@
         </tr>
     </table>
     <a href="<?php echo base_url('index.php/admin/invoice')?>"><div class="btn btn-sm btn-primary">Kembali</div></a>
+    <a href="<?php echo base_url('index.php/admin/invoice/hapus/')?>"><div class="btn btn-sm btn-danger">Hapus</div></a>
 </div>

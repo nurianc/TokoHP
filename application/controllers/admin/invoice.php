@@ -31,4 +31,10 @@ class Invoice extends CI_Controller{
         $this->load->view('admin/detail_invoice',$data);
         $this->load->view('template_admin/footer');
     }
+    public function hapus($id)
+    {
+        $where = array('id_brg' =>$id);
+        $this->model_barang->hapus_data($where,'tb_barang');
+        redirect('admin/invoice/index');
+    }
 }
