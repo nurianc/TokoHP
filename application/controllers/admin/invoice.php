@@ -33,8 +33,8 @@ class Invoice extends CI_Controller{
     }
     public function hapus($id)
     {
-        $where = array('id_brg' =>$id);
-        $this->model_barang->hapus_data($where,'tb_barang');
-        redirect('admin/invoice/index');
+        $where = array('id' =>$id);
+        $this->model_barang->hapus_data($where,'tb_invoice','tb_pesanan');
+        redirect('admin/invoice/index/');
     }
 }

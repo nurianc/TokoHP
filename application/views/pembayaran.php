@@ -4,6 +4,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <div class="btn btn-sm btn-success">
+            <h3>Lakukan Pembayaran Terlebih Dahulu sebesar</h3>
             <?php 
             $grand_total=0;
             if($keranjang = $this->cart->contents())
@@ -48,7 +49,7 @@
                 <option>Mandiri-xxxxxxx</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-sm btn-success">Pesan</button>
+        <button type="submit" class="btn btn-sm btn-success">Kirim Invoice</button>
     </form>
     <?php
     }else{

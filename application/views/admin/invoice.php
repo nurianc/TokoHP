@@ -16,7 +16,10 @@
             <td><?php echo $inv->alamat ?></td>
             <td><?php echo $inv->tgl_pesan ?></td>
             <td><?php echo $inv->batas_bayar ?></td>
-            <td><?php echo anchor('/admin/invoice/detail/'.$inv->id,'<div class="btn btn-sm btn-primary">Detail</div>')?></td>
+            <td><?php echo anchor('/admin/invoice/detail/'.$inv->id,'<div class="btn btn-sm btn-primary">Detail</div>')?>
+            <td><?php echo anchor('/admin/invoice/hapus/'.$inv->id,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash" ></i></div>')?></td>
+            </td>
+            
         </tr>
         <?php endforeach;?>
     </table>
